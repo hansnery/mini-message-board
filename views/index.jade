@@ -1,11 +1,15 @@
 extends layout
 
 block content
-  h1= title
-  ul
-    each message in messages
-      li
-        strong #{message.user}
-        | : #{message.text}
-        br
-        small #{message.added.toLocaleString()}
+  div(class='content text-center')
+    h1= title
+    ul(class='list-group')
+      each message in messages
+        li(class='list-group-item')
+          strong #{message.user}
+          | : #{message.text}
+          br
+          small #{message.added.toLocaleString()}
+
+    // Add a link to the "/new" route
+    a(href='/new' class='btn btn-primary') Add New Message

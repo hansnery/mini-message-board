@@ -22,7 +22,7 @@ router.get('/', function(req, res, next) {
 
 /* GET form for new message */
 router.get('/new', function(req, res, next) {
-  res.render('new', { title: 'Post a New Message' }); // Assuming 'new.jade' is your form template
+  res.render('new', { title: 'Post a New Message' });
 });
 
 /* POST new message */

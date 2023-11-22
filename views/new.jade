@@ -1,12 +1,13 @@
 extends layout
 
 block content
-  h1 #{title}
-  form(method='POST', action='/new')
-    .form-group
-      label(for='user') Name:
-      input#user.form-control(type='text', name='user', required='required')
-    .form-group
-      label(for='text') Message:
-      textarea#text.form-control(name='text', required='required')
-    button.btn.btn-primary(type='submit') Post Message
+  div(class='container')
+    h1.text-center #{title}
+    form(class='mt-4', method='POST', action='/new')
+      .form-group
+        label(for='user') Name:
+        input#user.form-control(type='text', name='user', required='required')
+      .form-group
+        label(for='text') Message:
+        textarea#text.form-control(name='text', required='required')
+      button.btn.btn-primary.btn-block(type='submit') Post Message
